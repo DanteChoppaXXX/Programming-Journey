@@ -3,23 +3,12 @@
 
 import socket
 
-host = "93.188.163.64"
-Ports = [587,9100]
+Host = "162.240.218.33"
+Port = 21
 
-for i in range (0,5):
+s = socket.socket()
+s.connect((Host, Port))
+answer = s.recv(1024)
 
-    socket = socket.socket()
-
-    Ports = Ports[i]
-
-    print("This is the banner for the Port")
-
-    print(Ports)
-
-    socket.connect((host, Ports))
-
-    answer = socket.recv(1024)
-
-    print(answer)
-
-    socket.close()
+print(answer)
+s.close
