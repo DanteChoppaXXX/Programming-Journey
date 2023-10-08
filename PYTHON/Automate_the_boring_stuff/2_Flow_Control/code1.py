@@ -40,6 +40,7 @@ while True:
     toss = random.randint(0,1)
     choice = input('Head or Tail? : ')
     choice = choice.lower()
+    
     if choice == 'head' or choice == 'tail':
         time.sleep(3)
         print(f"Result:{'Head' if toss == 0 else 'Tail'}")
