@@ -15,10 +15,16 @@ class Restaurant():
         print(f"{self.name} is opened")
 
 restaurant = Restaurant("Oasis", "Eatery")
-print(f"{restaurant.name.title()}")
-print(f"{restaurant.type}")
+restaurant0 = Restaurant("Sandton Gold", "Hotel")
+restaurant1 = Restaurant("Dalco", "Guest House")
+
+#print(f"{restaurant.name.title()}")
+#print(f"{restaurant.type}")
 
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
-
+print('___________________')
+restaurant0.describe_restaurant()
+print('___________________')
+restaurant1.describe_restaurant()
 
