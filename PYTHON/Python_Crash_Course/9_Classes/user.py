@@ -2,7 +2,7 @@
 
 class User():
     """Creating a user profile"""
-    def __init__(self, first_name, last_name, username, email):
+    def __init__(self, first_name, last_name, username, email, login_attempts):
         self.firstname = first_name
         self.lastname =last_name
         self.username = username
