@@ -34,9 +34,36 @@ class Car():
         else:
             print("No negative increment allowed!")
 
+    def fill_gas_tank(self):
+        """Alert the driver to fill top up the gas"""
+        for i in range(3):
+            print("Running low on gas\nFill up!")
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles"""
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car."""
+        super().__init__(make, model, year)
+        self.battery_size = 70
+
+    def describe_battery(self):
+        """Print a statement describing the battery."""
+        print(f"This car has a {self.battery_size}-kwh battery")
+
+    def fill_gas_tank(self):
+        """Elecric cars don't have gas tanks."""
+        print("This car doesn't need a gas tank nor gas to function\nDummy!")
+
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
 my_new_car.update_odometer(19)
 my_new_car.read_odometer()
 my_new_car.increment_odometer(100)
 my_new_car.read_odometer()
+my_new_car.fill_gas_tank()
+
+my_tesla = ElectricCar('tesla', 'model s', 2023)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+my_tesla.fill_gas_tank()
