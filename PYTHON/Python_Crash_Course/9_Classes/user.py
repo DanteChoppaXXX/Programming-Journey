@@ -25,6 +25,22 @@ class User():
     def reset_login_attempts(self):
         self.login_attempts = 0
 
+class Admin(User):
+    """Creating an Admin user."""
+    def __init__(self, first_name, last_name, username, email, privileges):
+        super().__init__(first_name, last_name, username, email)
+        """Create list of admin privileges"""
+        privileges = ['can add post', 'can delete post', 'can ban users', 'can add users', 'can mute chatroom']
+        self.privileges = privileges
+
+    def show_privileges(self):
+        """Display all Administrator's privileges."""
+        print('ADMIN PRIVILEGES\n================')        
+        for i, privilege in enumerate(self.privileges, 1):
+            print(f'{i}: {privilege}')
+
+admin0 = Admin('kath', 'carl', 'katty', 'kath@email.com', 'privileges')
+admin0.show_privileges()
 # firstName = input("Enter your fist name: ")
 # lastName = input("Enter your last name: ")
 # username = input("Enter your username: ")
@@ -33,12 +49,12 @@ class User():
 # user0 = User(firstName, lastName, username, email)
 #user0.greet_user()
 #user0.describe_user()
-user0 = User('kath', 'carl', 'katty', 'kath@email.com')
+# user0 = User('kath', 'carl', 'katty', 'kath@email.com')
 
-user0.increment_login_attempts()
-user0.increment_login_attempts()
-user0.increment_login_attempts()
-print(f"Login Attempts: {user0.login_attempts}")
+# user0.increment_login_attempts()
+# user0.increment_login_attempts()
+# user0.increment_login_attempts()
+# print(f"Login Attempts: {user0.login_attempts}")
 
-user0.reset_login_attempts()
-print(f"Login Attempts (after reset): {user0.login_attempts}")
+# user0.reset_login_attempts()
+# print(f"Login Attempts (after reset): {user0.login_attempts}")
