@@ -19,12 +19,14 @@ def get_stored_user():
         return userName
 
 def get_new_user():
+    """Prompt the user for their name."""
     username = input("What's your name? ")
     user = username.title()
     filename = 'username.json'
     with open(filename, 'w') as file:
         json.dump(user, file)
         print(f"We'll remember you when you come back, {user}")
+
 
 def greet_user():
     """Greet the user by name."""
@@ -34,8 +36,17 @@ def greet_user():
     else:
         get_new_user()   
 
-greet_user()
+def verify_user():
+    """Check if it's the previous user."""
+    print(f"Are you {get_stored_user()}?: Y or N")
+    answer = input().lower()
+    if answer == 'y':
+        greet_user()
+    else:
+        get_new_user()
 
+#greet_user()
+verify_user()
 # with open(filename) as file:
 #     number = json.load(file)
 #     print(number)
