@@ -19,5 +19,6 @@ def show_completed_models(completed_models):
     for i, completed_model in enumerate(completed_models, start=1):
         print(f'{i}. {completed_model}')
 
-#print_models(unprinted_designs, completed_models)
+print(unprinted_designs[:])
+print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
