@@ -1,7 +1,7 @@
 #!../../bin/python3
 import socket
 
-host = 'www.12basketsfoods.com'
+host = '54.81.67.241'
 ports = [3306, 25, 22, 21]
 
 # try:

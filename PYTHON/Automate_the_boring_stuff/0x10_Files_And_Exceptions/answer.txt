@@ -1,0 +1,5 @@
+Statement 1: The expression is price + tax
+Statement 2: The expressions are age >= 18 and "You are an adult."
+Statement 3: The expression is num1 * (num2 + 7)
+Statement 4: The expression is "Hello, " + name + "!"
+Statement 5: The expression is 
